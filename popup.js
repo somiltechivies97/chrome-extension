@@ -175,7 +175,7 @@ async function displayMedicines(fromDOMContentLoaded = false) {
 
     const medicines = result.medicineData || [];
     const medicineList = document.getElementById('medicine-list');
-    if (medicines.length && fromDOMContentLoaded) {
+    if (medicines.length && fromDOMContentLoaded && !result.startFetching) {
       this.setStatus(`Fetched total ${medicines.length} medicine from ${medicines.length / 30} page`, true);
     };
 
